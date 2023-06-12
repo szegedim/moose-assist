@@ -64,8 +64,12 @@ If not, see <https:#creativecommons.org/publicdomain/zero/1.0/legalcode>.
     // The counter block value ensures uniqueness derived from the leaf
     let counter = new Uint8Array(16)
     // document.location.search contains the api key for the server without the e2e leaf key
-    let wsHost = "ws://" + document.location.host + "/ws" + document.location.search
-    //let wsHost = "wss://" + document.location.host + "/" + document.location.search
+    //let wsHost = "ws://" + document.location.host + "/ws" + document.location.search
+    let wsHost = "wss://" + document.location.host + "/ws" + document.location.search
+
+    if (document.location.protocol === "http:") {
+        wsHost = "ws://" + document.location.host + "/ws" + document.location.search
+    }
 
     let audioContext = null
     let webSocket = null;

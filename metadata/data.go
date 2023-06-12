@@ -12,3 +12,5 @@ package metadata
 
 // You can set this as a default or load from os.Getenv("APIKEY")
 var ActivationKey = ""
+
+var SiteUrl = "http://127.0.0.1:7777"

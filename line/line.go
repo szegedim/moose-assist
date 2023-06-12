@@ -22,8 +22,15 @@ import (
 // If not, see <https:#creativecommons.org/publicdomain/zero/1.0/legalcode>.
 
 func Setup() {
-	metadata.ActivationKey = os.Getenv("APIKEY")
-	fmt.Printf("Try local %s\n", "http://127.0.0.1:7777/line.html?apikey="+metadata.ActivationKey+"#generate_leaf")
+	activationKey := os.Getenv("APIKEY")
+	if activationKey != "" {
+		metadata.ActivationKey = activationKey
+	}
+	siteUrl := os.Getenv("SITEURL")
+	if siteUrl != "" {
+		metadata.SiteUrl = siteUrl
+	}
+	fmt.Printf("Try local %s\n", metadata.SiteUrl+"/line.html?apikey="+metadata.ActivationKey+"#generate_leaf")
 	http.Handle("/ws", websocket.Handler(relayLine))
 
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {

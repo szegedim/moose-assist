@@ -24,6 +24,8 @@ You run a simple container yourself in your cloud or on premises environment.
 
 [![Deploy to DO](https://www.deploytodo.com/do-btn-white-ghost.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/szegedim/moose-assist/tree/main&refcode=48f147bd7dcd)
 
+Make sure you change the environment settings APIKEY and SITEURL for a production site.
+
 ## Security
 
 The connection is over HTML websockets.

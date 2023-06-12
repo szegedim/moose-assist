@@ -22,7 +22,7 @@ You run a simple container yourself in your cloud or on premises environment.
 
 ## Try it
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-white-ghost.svg)](https://cloud.digitalocean.com/apps/new?repo=https://gitlab.com/eper.io/moose-assist/tree/main&refcode=48f147bd7dcd)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-white-ghost.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/szegedim/moose-assist/tree/main&refcode=48f147bd7dcd)
 
 ## Security
 
